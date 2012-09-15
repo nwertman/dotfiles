@@ -1,0 +1,3 @@
+set runtimepath+=~/.janus
+
+au BufRead,BufNewFile *.txt setfiletype ignored

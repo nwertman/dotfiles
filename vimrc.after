@@ -1,0 +1,89 @@
+" Add a red column at 80 characters
+"hi ColorColumn guibg=#2d2d2d
+"set colorcolumn=80
+
+"set foldmethod=indent
+"
+"
+
+function! ShowTests ()
+  call system("tmux join-pane -l 12 -dv -s " . g:tmux_sessionname . ":_.0 -t " . g:tmux_sessionname . ":Vim.0")
+endfunction
+
+function! HideTests ()
+  call system("tmux break-pane -d -t " . g:tmux_sessionname . ":Vim.1")
+  call system("tmux rename-window -t " . g:tmux_sessionname . ":10 _")
+endfunction
+
+function! RunTests (path)
+  call ShowTests()
+
+  let g:tmux_windowname = 'Vim'
+  let g:tmux_panenumber = 1
+
+  call SendTestToTmux(a:path)
+endfunction
+
+function! RunFocusedTests (path, line)
+  call ShowTests()
+
+  let g:tmux_windowname = 'Vim'
+  let g:tmux_panenumber = 1
+  call SendFocusedTestToTmux(a:path, a:line)
+endfunction
+
+function! RunPry (path)
+  " Setup our TSlime buffers
+  let g:tmux_windowname = 'Pry'
+  let g:tmux_panenumber = 0
+
+  call system("tmux select-window -t change_object:Pry")
+  call Send_to_Tmux("\nload \"" . a:path . "\"\n")
+endfunction
+
+set t_Co=256
+" color desert256
+color codeschool
+" Make background transparent
+hi Normal ctermbg=NONE
+hi NonText ctermbg=NONE
+hi LineNr ctermbg=NONE ctermfg=23
+"hi StatusLineNC term=bold,reverse cterm=reverse ctermfg=145 ctermbg=16
+
+
+" Use fancy NERDTree drawing"
+let g:NERDTreeWinPos = "left"
+let NERDTreeDirArrows = 1
+let NERDTreeMouseMode = 3
+
+map <S-h> gT
+map <S-l> gt
+map tn :tabnew<CR>
+map td :tabclose<CR>
+
+" Ignore syntax highlighting on txt files
+au BufRead,BufNewFile *.txt setfiletype ignored
+
+" Setup our primary TSlime session
+let g:tmux_sessionname = system("tmux list-sessions | grep '(attached)' | sed  's/\:.*//' | tr -d '\n'")
+
+" Use 'bundle exec' when running tests
+let g:turbux_command_prefix = 'bundle exec'
+
+nnoremap <silent> <Plug>RunTests :<C-U>w <bar> call RunTests(expand('%'))<CR>
+nnoremap <silent> <Plug>RunFocusedTests :<C-U>w <bar> call RunFocusedTests(expand('%'), line('.'))<CR>
+nnoremap <silent> <Plug>RunPry :<C-U>w <bar> call RunPry(expand('%'))<CR>
+
+nmap st :call ShowTests()<CR>
+nmap ht :call HideTests()<CR>
+nmap rt <Plug>RunTests
+nmap rT <Plug>RunFocusedTests
+nmap rp <Plug>RunPry
+
+
+" nnoremap rt :w<bar>:call RunTests(expand('%:p'))<CR>
+" nnoremap rp :w<bar>:call RunPry(expand('%:p'))<CR>
+
+" nnoremap <F3> :w<bar>:call RunPry(expand('%:p'))<CR>
+" nnoremap <F4> :w<bar>:call RunTests(expand('%:p'))<CR>
+

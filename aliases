@@ -1,0 +1,35 @@
+HOST=$(hostname -s)
+
+# Development aliases
+alias trunk="cd ~/Source/Professional/IntegrationTools/trunk"
+alias wip="cd ~/Source/Professional/IntegrationTools/nwertman-wip"
+alias sc="cd $INTLIB_TMP_DIR/integration_tools/source_cache/local"
+alias it="cd $INTLIB_TMP_DIR/integration_tools"
+
+alias prod_irb="/usr/bin/irb"
+alias irb="INTLIB_RADAR_UAT=1 INTLIB_LANGLEY_UAT=1 irb"
+
+# SVN helpers
+alias si="svn info"
+alias smb="svn-merge-branch"
+alias ci="svn ci"
+alias sl="svn log --stop-on-copy"
+alias sls="svn ls"
+alias st="svn status"
+
+# Shortcuts
+alias name="pwd | xargs basename"
+alias f="find . -name"
+
+alias la="ls -lad"
+alias src="source ~/.profile; ssh-add"
+
+alias p1='awk "{print \$1}"'
+alias p2='awk "{print \$2}"'
+alias p3='awk "{print \$3}"'
+alias p4='awk "{print \$4}"'
+alias p5='awk "{print \$5}"'
+alias p6='awk "{print \$6}"'
+alias p9='awk "{print \$9}"'
+
+source ~/.aliases.work

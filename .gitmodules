@@ -4,3 +4,6 @@
 [submodule "janus/tslime/plugin"]
 	path = janus/tslime/plugin
 	url = https://github.com/kikijump/tslime.vim.git
+[submodule "janus/turbux"]
+	path = janus/turbux
+	url = https://github.com/jgdavey/vim-turbux.git

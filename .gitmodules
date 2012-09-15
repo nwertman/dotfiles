@@ -1,0 +1,3 @@
+[submodule "janus/dwm"]
+	path = janus/dwm
+	url = https://github.com/spolu/dwm.vim.git

@@ -1,0 +1,39 @@
+snippet normal
+	-
+		project: ${1:xxxx}
+		branch: ${2:xxxx}
+		tag: $1-${3:xxxx}
+		affected_trains: ${4:xxxx}
+		destination_trains: ${5:$4}
+		built_against: ${6}
+		radars: |
+			${7}
+		dependencies: ${8}
+		instructions: ${9}
+snippet sidebuild
+	-	
+		project: ${1:xxxx}
+		branch: ${2:xxxx}
+		submission_style: sidebuild_submit
+		base_tag: $1-${3:xxxx}
+		base_train: ${4:xxxx}
+		affected_trains: ${5:xxxx}
+		destination_trains: ${6}
+		built_against: ${7}
+		radars: |
+			${8}
+		dependencies: ${9}
+		instructions: ${10}
+snippet autosubmitted
+	-	
+		project: ${1:xxxx}
+		branch: ${2:xxxx}
+		autosubmitted: true
+		tag: $1-${3:xxxx}
+		affected_trains: ${4:xxxx}
+		destination_trains: ${5:$4}
+		built_against: ${6}
+		radars: |
+			${7}
+		dependencies: ${8}
+		instructions: ${9}

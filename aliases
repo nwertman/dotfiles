@@ -6,6 +6,9 @@ alias wip="cd ~/Source/Professional/IntegrationTools/nwertman-wip"
 alias sc="cd $INTLIB_TMP_DIR/integration_tools/source_cache/local"
 alias it="cd $INTLIB_TMP_DIR/integration_tools"
 
+alias pro_src="cd $SOURCE_PROFESSIONAL"
+alias per_src="cd $SOURCE_PERSONAL"
+
 alias prod_irb="/usr/bin/irb"
 alias irb="INTLIB_RADAR_UAT=1 INTLIB_LANGLEY_UAT=1 irb"
 

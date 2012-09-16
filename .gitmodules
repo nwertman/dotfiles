@@ -9,3 +9,4 @@
 [submodule "janus/tslime"]
 	path = janus/tslime
 	url = https://github.com/jgdavey/tslime.vim.git
+  ignore = untracked

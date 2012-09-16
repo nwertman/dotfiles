@@ -26,6 +26,9 @@ export PYTHONPATH=$PYTHONPATH:~/bin/py_lib
 export INTLIB_AC_USERNAME=nwertman
 export INTLIB_OD_USERNAME=$INTLIB_AC_USERNAME
 export INTLIB_TMP_DIR=${HOME}/Work
+export SOURCE=~/Source
+export SOURCE_PROFESSIONAL=${SOURCE}/Professional
+export SOURCE_PERSONAL=${SOURCE}/Personal
 
 # Use a more capable pager
 export PAGER="less -r"

@@ -9,3 +9,4 @@
 [submodule "janus/turbux"]
 	path = janus/turbux
 	url = https://github.com/nwertman/vim-turbux.git
+  ignore = untracked

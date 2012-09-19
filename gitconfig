@@ -1,0 +1,25 @@
+[user]
+	name = Nathan Wertman
+  email = nwertman@apple.com
+[color]
+  ui = auto
+[core]
+  pager = less -+$LESS -FRX
+  editor = vim
+  whitespace = blank-at-eol, space-before-tab, indent-with-non-tab, blank-at-eof
+  abbrev = 11
+  trustctime = false
+[diff]
+  mnemonicprefix = true
+[log]
+  decorate = short
+[push]
+  default = tracking
+[alias]
+  egrep = grep -E
+  p2u = pull --ff-only
+  ff2u = merge --ff-only @{upstream}
+  reset2u = reset --hard @{upstream}
+  log2u = -c core.pager='less -p ^commit' log -p --reverse ..@{upstream}
+  graph = -c core.pager='less -SFRX' log --oneline --graph --date-order
+  tgraph = -c core.pager='less -SFRX' log --oneline --graph

@@ -6,8 +6,14 @@
 "
 "
 
+function! FocusTests()
+  call ShowTests()
+
+  call system("tmux select-pane -t 1")
+endfunction
+
 function! ShowTests ()
-  call system("tmux join-pane -l 12 -dv -s " . g:tmux_sessionname . ":_.0 -t " . g:tmux_sessionname . ":Vim.0")
+  call system("tmux join-pane -p 20 -dv -s " . g:tmux_sessionname . ":_.0 -t " . g:tmux_sessionname . ":Vim.0")
 endfunction
 
 function! HideTests ()
@@ -32,6 +38,25 @@ function! RunFocusedTests (path, line)
   call SendFocusedTestToTmux(a:path, a:line)
 endfunction
 
+function! RunAllTests ()
+  call ShowTests()
+
+  let g:tmux_windowname = 'Vim'
+  let g:tmux_panenumber = 1
+
+  call Send_to_Tmux("\nrake test\n")
+endfunction
+
+
+function! RunLastTests ()
+  call ShowTests()
+
+  let g:tmux_windowname = 'Vim'
+  let g:tmux_panenumber = 1
+
+  call Send_to_Tmux("\n!!\n")
+endfunction
+
 function! RunPry (path)
   " Setup our TSlime buffers
   let g:tmux_windowname = 'Pry'
@@ -48,6 +73,7 @@ color codeschool
 hi Normal ctermbg=NONE
 hi NonText ctermbg=NONE
 hi LineNr ctermbg=NONE ctermfg=23
+set listchars=tab:▸\ ,eol:¬
 "hi StatusLineNC term=bold,reverse cterm=reverse ctermfg=145 ctermbg=16
 
 
@@ -72,14 +98,18 @@ let g:turbux_command_prefix = 'bundle exec'
 
 nnoremap <silent> <Plug>RunTests :<C-U>w <bar> call RunTests(expand('%'))<CR>
 nnoremap <silent> <Plug>RunFocusedTests :<C-U>w <bar> call RunFocusedTests(expand('%'), line('.'))<CR>
+nnoremap <silent> <Plug>RunAllTests :<C-U>w <bar> call RunAllTests()<CR>
+nnoremap <silent> <Plug>RunLastTests :<C-U>w <bar> call RunLastTests()<CR>
 nnoremap <silent> <Plug>RunPry :<C-U>w <bar> call RunPry(expand('%'))<CR>
 
-nmap st :call ShowTests()<CR>
-nmap ht :call HideTests()<CR>
-nmap rt <Plug>RunTests
-nmap rT <Plug>RunFocusedTests
-nmap rp <Plug>RunPry
-
+nmap <Leader>tf :call FocusTests()<CR>
+nmap <Leader>ts :call ShowTests()<CR>
+nmap <Leader>th :call HideTests()<CR>
+nmap <Leader>tr <Plug>RunFocusedTests
+nmap <Leader>tR <Plug>RunTests
+nmap <Leader>tA <Plug>RunAllTests
+nmap <Leader>tl <Plug>RunLastTests
+nmap <Leader>tp <Plug>RunPry
 
 " nnoremap rt :w<bar>:call RunTests(expand('%:p'))<CR>
 " nnoremap rp :w<bar>:call RunPry(expand('%:p'))<CR>

@@ -33,9 +33,14 @@ export SOURCE_PERSONAL=${SOURCE}/Personal
 # Use a more capable pager
 export PAGER="less -r"
 
+export TMUX_DEFAULT_PATH=`tmux show-options | awk '{print $2}' | sed 's/\"//g'`
+
 # Read in our aliases
 source ~/.aliases
+
 
 set -o vi
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+

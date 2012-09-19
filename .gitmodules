@@ -2,10 +2,6 @@
 	path = janus/dwm
   url = https://github.com/spolu/dwm.vim.git
   ignore = untracked
-[submodule "janus/turbux"]
-	path = janus/turbux
-	url = https://github.com/jgdavey/vim-turbux.git
-  ignore = untracked
 [submodule "janus/tslime"]
 	path = janus/tslime
 	url = https://github.com/jgdavey/tslime.vim.git

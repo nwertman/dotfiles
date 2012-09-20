@@ -2,15 +2,16 @@ HOST=$(hostname -s)
 
 # Development aliases
 alias trunk="cd ~/Source/Professional/IntegrationTools/trunk"
-alias wip="cd ~/Source/Professional/IntegrationTools/nwertman-wip"
-alias sc="cd $INTLIB_TMP_DIR/integration_tools/source_cache/local"
+alias sc="cd $INTLIB_TMP_DIR/integration_tools/source_cache/${USER}"
 alias it="cd $INTLIB_TMP_DIR/integration_tools"
 
 alias pro_src="cd $SOURCE_PROFESSIONAL"
 alias per_src="cd $SOURCE_PERSONAL"
+alias pry="INTLIB_USE_UAT=1 pry"
+alias prod_pry="/usr/bin/pry"
 
 alias prod_irb="/usr/bin/irb"
-alias irb="INTLIB_RADAR_UAT=1 INTLIB_LANGLEY_UAT=1 irb"
+alias irb="INTLIB_USE_UAT=1 irb"
 
 # SVN helpers
 alias si="svn info"
@@ -39,5 +40,6 @@ alias itests="cd ${TMUX_DEFAULT_PATH}/lib/rlib/tests"
 alias ilib="cd ${TMUX_DEFAULT_PATH}/lib/rlib"
 alias ihelpers="cd ${TMUX_DEFAULT_PATH}/lib/rlib/tests/helpers"
 alias iwork="cd ${TMUX_DEFAULT_PATH}"
+
 
 source ~/.aliases.work

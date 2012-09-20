@@ -94,7 +94,7 @@ au BufRead,BufNewFile *.txt setfiletype ignored
 let g:tmux_sessionname = system("tmux list-sessions | grep '(attached)' | sed  's/\:.*//' | tr -d '\n'")
 
 " Use 'bundle exec' when running tests
-let g:turbux_command_prefix = 'bundle exec'
+" let g:turbux_command_prefix = 'bundle exec'
 
 nnoremap <silent> <Plug>RunTests :<C-U>w <bar> call RunTests(expand('%'))<CR>
 nnoremap <silent> <Plug>RunFocusedTests :<C-U>w <bar> call RunFocusedTests(expand('%'), line('.'))<CR>

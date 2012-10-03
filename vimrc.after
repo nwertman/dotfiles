@@ -54,7 +54,7 @@ function! RunLastTests ()
   let g:tmux_windowname = 'Vim'
   let g:tmux_panenumber = 1
 
-  call Send_to_Tmux("\n!!\n")
+  call Send_to_Tmux("q\n!!\n")
 endfunction
 
 function! RunPry (path)

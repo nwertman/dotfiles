@@ -12,7 +12,6 @@ files=`ls $dir`                   # file list of files/folders to symlink in hom
 
 ##########
 
-
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
@@ -25,7 +24,7 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in `ls ${dir}`; do
-  if [[ "$file" == `basename $0` ]]; then
+  if [[ "$file" == `basename $0` || `basename $file` == "private.xml" || `basename $file` == "Keyboard Maestro Macros.plist" ]]; then
     continue # Don't install this script
   fi
 
@@ -40,3 +39,14 @@ for file in `ls ${dir}`; do
   echo "Creating symlink to $dotfile_path in home directory."
   ln -s $dotfile_path $home_path
 done
+
+# Create a symlink for private.xml
+# Library/Application Support/KeyRemap4MacBook -> /Volumes/Data/Users/local/.dotfiles/private.xml
+# Download software from:
+# http://pqrs.org/macosx/keyremap4macbook/
+
+# Create a symlink for Keyboard Maestro Macros.plist
+# Library/Application Support/Keyboard Maestro/Keyboard Maestro Macros.plist -> /Volumes/Data/Users/local/.dotfiles/Keyboard Maestro Macros.plist
+# Download software from:
+# http://www.keyboardmaestro.com/main/
+

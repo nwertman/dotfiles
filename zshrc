@@ -29,7 +29,7 @@ ZSH_THEME="nwertman"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ruby osx git)
+plugins=(ruby osx)
 export DISABLE_AUTO_TITLE="true"   # Don't update the title, let tmux handle that.
 source $ZSH/oh-my-zsh.sh
 

@@ -19,4 +19,3 @@ tabs:
       panes:
         - top -u -s 3
         - sudo tail -f /var/log/system.log
-  - _:

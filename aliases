@@ -41,5 +41,4 @@ alias ilib="cd ${TMUX_DEFAULT_PATH}/lib/rlib"
 alias ihelpers="cd ${TMUX_DEFAULT_PATH}/lib/rlib/tests/helpers"
 alias iwork="cd ${TMUX_DEFAULT_PATH}"
 
-
 source ~/.aliases.work

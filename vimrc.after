@@ -53,5 +53,13 @@ map <Leader>rb :w<bar>:RunAllRubyTest<CR>
 map <Leader>rl :w<bar>:call VimuxRunLastCommand()<CR>
 map <Leader>rp :w<bar>:call RunPry(expand('%'))<CR>
 map <Leader>rc :w<bar>:call RunCommand()<CR>
-map <S-u> :call VimuxScrollUpInspect()<CR>
-map <S-d> :call VimuxScrollDownInspect()<CR>
+map <S-k> :call VimuxScrollUpInspect()<CR>
+map <S-j> :call VimuxScrollDownInspect()<CR>
+
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+" Work related abbreviations
+abbr a_cdc c = CoreOSData.client()

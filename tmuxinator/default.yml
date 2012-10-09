@@ -14,7 +14,7 @@ tabs:
   - bash:
   - bash:
   - bash:
-  - 'System Status':
+  - Logs:
       layout: even-vertical
       panes:
         - top -u -s 3

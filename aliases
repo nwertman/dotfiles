@@ -7,7 +7,7 @@ alias it="cd $INTLIB_TMP_DIR/integration_tools"
 
 alias pro_src="cd $SOURCE_PROFESSIONAL"
 alias per_src="cd $SOURCE_PERSONAL"
-alias pry="INTLIB_USE_UAT=1 pry"
+alias pry="INTLIB_LANGLEY_UAT=1 INTLIB_USE_UAT=1 pry"
 alias prod_pry="/usr/bin/pry"
 
 alias prod_irb="/usr/bin/irb"

@@ -15,5 +15,11 @@ def time_method(method=nil, *args)
   puts "Time elapsed #{(end_time - beginning_time)*1000} milliseconds"
 end
 
+# Add !<history>
+Pry.commands.block_command(/!(\d+)/, "Replay a line of history", :listing => "!hist") do |line|
+  run "history --replay #{line}"
+end
+
+#
 # Load in confidential work stuff
 load File.expand_path("~/.pryrc_work")

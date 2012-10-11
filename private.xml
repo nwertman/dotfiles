@@ -98,6 +98,22 @@
                 </autogen>
             </item>
             <item>
+                <name>Remap Right Command to Hyper</name>
+                <appendix>OS X doesn't have a Hyper. This maps Right Command to Control + Shift_R + Option + Command.</appendix>
+                <appendix>You can use this key in your own custom keyboard shortcuts you create in apps.</appendix>
+                
+                <identifier>space_cadet.right_command_to_hyper</identifier>
+                
+                <autogen>
+                    --KeyToKey--
+                    KeyCode::F18,
+                    
+                    KeyCode::COMMAND_L,
+                    ModifierFlag::OPTION_L | ModifierFlag::SHIFT_R | ModifierFlag::CONTROL_L
+                </autogen>
+            </item>
+
+            <item>
                 <name>Restore [Shift-]Opt-(Left/Right)</name>
                 <appendix>The Unicode Hex Input keyboard layout disables these keys for some reason.</appendix>
 

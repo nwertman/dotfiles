@@ -22,11 +22,13 @@ function! RunCommand ()
 endfunction
 
 set t_Co=256
-color codeschool
+"color codeschool
+set bg=dark
+color solarized
 " Make background transparent
-hi Normal ctermbg=NONE
-hi NonText ctermbg=NONE
-hi LineNr ctermbg=NONE ctermfg=23
+"hi Normal ctermbg=NONE
+"hi NonText ctermbg=NONE
+"hi LineNr ctermbg=NONE ctermfg=23
 set listchars=tab:▸\ ,eol:¬
 
 " Use fancy NERDTree drawing"

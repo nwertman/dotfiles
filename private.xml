@@ -83,11 +83,11 @@
                 </autogen>
             </item>
             <item>
-                <name>Remap Right Option to Hyper</name>
-                <appendix>OS X doesn't have a Hyper. This maps Right Option to Control + Shift_R + Option + Command.</appendix>
+                <name>Remap Right Control to Hyper</name>
+                <appendix>OS X doesn't have a Hyper. This maps Right Control to Control + Shift + Option + Command.</appendix>
                 <appendix>You can use this key in your own custom keyboard shortcuts you create in apps.</appendix>
 
-                <identifier>space_cadet.right_option_to_hyper</identifier>
+                <identifier>space_cadet.right_control_to_hyper</identifier>
 
                 <autogen>
                     --KeyToKey--
@@ -106,7 +106,7 @@
                 
                 <autogen>
                     --KeyToKey--
-                    KeyCode::F18,
+                    KeyCode::F17,
                     
                     KeyCode::COMMAND_L,
                     ModifierFlag::OPTION_L | ModifierFlag::SHIFT_R | ModifierFlag::CONTROL_L

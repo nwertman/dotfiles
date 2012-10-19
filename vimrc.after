@@ -24,7 +24,8 @@ endfunction
 set t_Co=256
 "color codeschool
 set bg=dark
-color solarized
+color zenburn
+" color tango
 " Make background transparent
 "hi Normal ctermbg=NONE
 "hi NonText ctermbg=NONE
@@ -55,13 +56,39 @@ map <Leader>rb :w<bar>:RunAllRubyTest<CR>
 map <Leader>rl :w<bar>:call VimuxRunLastCommand()<CR>
 map <Leader>rp :w<bar>:call RunPry(expand('%'))<CR>
 map <Leader>rc :w<bar>:call RunCommand()<CR>
-map <S-k> :call VimuxScrollUpInspect()<CR>
-map <S-j> :call VimuxScrollDownInspect()<CR>
+" map <S-k> :call VimuxScrollUpInspect()<CR>
+" map <S-j> :call VimuxScrollDownInspect()<CR>
 
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
+" Toggle paste mode using <F2>
+noremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 " Work related abbreviations
 abbr a_cdc c = CoreOSData.client()
+
+" Only remove trailing white spaces when compiled with support for
+" autocommands
+if has("autocmd")
+  autocmd BufWritePre *.rb :call <SID>StripTrailingWhitespaces()
+endif
+
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  
+  " Do the strip
+  %s/\s\_$//e
+
+  " Restore our settings
+  let @/=_s
+  call cursor(l, c)
+endfunction

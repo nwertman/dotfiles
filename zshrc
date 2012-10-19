@@ -46,6 +46,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Setup our stty to not suspend on ^y (for mutt archiving)
+stty dsusp undef
+
 # Customize to your needs
 export PAGER="less -r"
 export EDITOR=vim

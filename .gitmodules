@@ -10,6 +10,3 @@
 	path = janus/vimux-ruby-test
 	url = https://github.com/pgr0ss/vimux-ruby-test.git
   ignore = untracked
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/nwertman/oh-my-zsh.git

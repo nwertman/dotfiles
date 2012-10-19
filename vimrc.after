@@ -24,7 +24,8 @@ endfunction
 set t_Co=256
 "color codeschool
 set bg=dark
-color zenburn
+"color zenburn
+color solarized
 " color tango
 " Make background transparent
 "hi Normal ctermbg=NONE

@@ -41,6 +41,6 @@ alias ilib="cd ${TMUX_DEFAULT_PATH}/lib/rlib"
 alias ihelpers="cd ${TMUX_DEFAULT_PATH}/lib/rlib/tests/helpers"
 alias iwork="cd ${TMUX_DEFAULT_PATH}"
 
-alias mutt 'cd ~/Desktop && mutt'
+alias mutt='cd ~/Desktop && mutt'
 
 source ~/.aliases.work

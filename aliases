@@ -36,10 +36,18 @@ alias p5='awk "{print \$5}"'
 alias p6='awk "{print \$6}"'
 alias p9='awk "{print \$9}"'
 
-alias itests="cd ${TMUX_DEFAULT_PATH}/lib/rlib/tests"
-alias ilib="cd ${TMUX_DEFAULT_PATH}/lib/rlib"
-alias ihelpers="cd ${TMUX_DEFAULT_PATH}/lib/rlib/tests/helpers"
-alias iwork="cd ${TMUX_DEFAULT_PATH}"
+iwork() {
+  cd `~/bin/workit`
+}
+ilib() {
+  cd `~/bin/workit`/lib/rlib
+}
+itests() {
+  cd `~/bin/workit`/lib/rlib/tests
+}
+ihelpers() {
+  cd `~/bin/workit`/lib/rlib/tests/helpers
+}
 
 alias mutt='cd ~/Desktop && mutt'
 

@@ -1,6 +1,6 @@
 [submodule "janus/dwm"]
 	path = janus/dwm
-  url = https://github.com/spolu/dwm.vim.git
+	url = git://github.com/spolu/dwm.vim.git
   ignore = untracked
 [submodule "janus/vimux"]
 	path = janus/vimux
@@ -12,4 +12,4 @@
   ignore = untracked
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = https://github.com/nwertman/oh-my-zsh.git
+	url = git@github.com:nwertman/oh-my-zsh.git

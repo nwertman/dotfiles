@@ -8,7 +8,7 @@ pre:
   - security unlock-keychain
 tabs:
   - Mutt: mutt
-  - Irssi: irssi
+  - Org: vim ~/Desktop/Org.txt
   - Vim: vim
   - Pry: pry
   - zsh: 

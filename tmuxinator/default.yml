@@ -5,11 +5,8 @@ project_name: default
 project_root: /Volumes/Data/Users/local
 pre: sudo ls /tmp
 tabs:
-  - Mutt: mutt
-  - Irssi: irssi
   - Logs:
       layout: even-vertical
       panes:
         - top -u -s 3
         - sudo tail -f /var/log/system.log
-        - tail -f /private/var/tmp/offlineimap.log

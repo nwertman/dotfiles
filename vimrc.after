@@ -22,15 +22,8 @@ function! RunCommand ()
 endfunction
 
 set t_Co=256
-"color codeschool
 set bg=dark
-"color zenburn
-color solarized
-" color tango
-" Make background transparent
-"hi Normal ctermbg=NONE
-"hi NonText ctermbg=NONE
-"hi LineNr ctermbg=NONE ctermfg=23
+color jellybeans
 set listchars=tab:▸\ ,eol:¬
 
 " Use fancy NERDTree drawing"

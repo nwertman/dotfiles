@@ -52,6 +52,7 @@ stty dsusp undef
 # Customize to your needs
 export PAGER="less -r"
 export EDITOR=vim
+export SHELL=/bin/zsh
 export SVN_URL="svn+ssh://src/svn"
 export HOMEBREWDIR=~/homebrew
 export PATH=$HOMEBREWDIR/bin:$PATH:/usr/local/bin:~/bin:/Developer/usr/local/bin:~/bin:~/integration/local/bin

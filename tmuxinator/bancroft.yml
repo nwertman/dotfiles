@@ -7,10 +7,10 @@ pre:
   - sudo ls /tmp
   - security unlock-keychain
 tabs:
-  - Mutt: mutt
-  - Org: vim ~/Desktop/Org.txt
   - Vim: vim
   - Pry: pry
+  - zsh: 
+  - zsh: 
   - zsh: 
   - zsh: 
   - zsh: 
@@ -21,4 +21,3 @@ tabs:
       panes:
         - top -u -s 3
         - sudo tail -f /var/log/system.log
-        - tail -f /private/var/tmp/offlineimap.log

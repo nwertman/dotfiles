@@ -53,10 +53,10 @@ map <Leader>rc :w<bar>:call RunCommand()<CR>
 " map <S-k> :call VimuxScrollUpInspect()<CR>
 " map <S-j> :call VimuxScrollDownInspect()<CR>
 
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-l> :wincmd l<CR>
+"nmap <silent> <C-h> :wincmd h<CR>
+"nmap <silent> <C-j> :wincmd j<CR>
+"nmap <silent> <C-k> :wincmd k<CR>
+"nmap <silent> <C-l> :wincmd l<CR>
 
 " Toggle paste mode using <F2>
 noremap <F2> :set invpaste paste?<CR>

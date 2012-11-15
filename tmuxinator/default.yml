@@ -10,3 +10,17 @@ tabs:
       panes:
         - top -u -s 3
         - sudo tail -f /var/log/system.log
+        - tail -f /private/var/tmp/offlineimap.log
+  - Mutt: cd ~/Desktop && mutt
+  - Irssi: cd ~/Desktop && irssi
+  - Vim: iwork && vim
+  - Pry: iwork && pry
+  - Zsh: iwork && zsh
+  - Zsh: iwork && zsh
+  - Zsh: iwork && zsh
+  - Zsh: iwork && zsh
+  - Zsh: iwork && zsh
+  - bancroft: cd ~/Desktop && ssh bancroft
+  - bigrip: cd ~/Desktop && ssh bigrip
+  - jubilee: cd ~/Desktop && ssh jubilee
+  - alton: cd ~/Desktop && ssh alton

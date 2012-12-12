@@ -15,6 +15,11 @@ def time_method(method=nil, *args)
   puts "Time elapsed #{(end_time - beginning_time)*1000} milliseconds"
 end
 
+def load_test_data()
+  load 'lib/rlib/tests/helpers/testdata.rb'
+  TestData.instance.purge_and_create(TestData::TEST_DATA)
+end
+
 # Add !<history>
 Pry.commands.block_command(/!(\d+)/, "Replay a line of history", :listing => "!hist") do |line|
   run "history --replay #{line}"

@@ -20,7 +20,7 @@ tabs:
   - Zsh: iwork && zsh
   - Zsh: iwork && zsh
   - Zsh: iwork && zsh
-  - bancroft: cd ~/Desktop && ssh bancroft
-  - bigrip: cd ~/Desktop && ssh bigrip
-  - jubilee: cd ~/Desktop && ssh jubilee
-  - alton: cd ~/Desktop && ssh alton
+  - bancroft: cd ~/Desktop && ~/bin/sshit bancroft
+  - bigrip: cd ~/Desktop && ~/bin/sshit bigrip
+  - jubilee: cd ~/Desktop && ~/bin/sshit jubilee
+  - alton: cd ~/Desktop && ~/bin/sshit alton

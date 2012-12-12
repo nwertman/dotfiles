@@ -1,0 +1,10 @@
+/script load adv_windowlist
+/statusbar window remove act
+/set awl_block 15
+/set awl_sbar_maxlength ON
+/set awl_maxlines 5
+/set awl_display_key $N$H$C$S
+/set awl_display_nokey $N$H$C$S
+
+/ignore -channels #mutt,#vim,#tmux * JOINS PARTS QUITS NICKS
+/ignore -channels #mutt,#vim,#tmux -regexp -pattern (away|gone|back|playin|weg|wech|returned) * ACTIONS

@@ -41,6 +41,7 @@ au BufRead,BufNewFile *.txt setfiletype ignored
 
 " Setup our primary tmux session
 let g:tmux_sessionname = system("tmux list-sessions | grep '(attached)' | sed  's/\:.*//' | tr -d '\n'")
+let g:VimuxHeight = 30
 
 map <Leader>ri :call VimuxInspectRunner()<CR>
 map <Leader>rq :call VimuxCloseRunner()<CR>

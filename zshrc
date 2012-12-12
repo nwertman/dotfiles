@@ -46,6 +46,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Don't share history
+setopt nosharehistory
+
 # Setup our stty to not suspend on ^y (for mutt archiving)
 stty dsusp undef
 

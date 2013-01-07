@@ -1,13 +1,10 @@
 #!/bin/bash
-
-if [ ! -e install ]; then
-  echo "ERROR: Must be run from within the dotfiles checkout"
-  exit -1
-fi
+BASE=`dirname $0`
 
 # Ensure that stow is installed
-brew install stow
+c=`brew list | grep stow 2>&1 > /dev/null`
+if [[ "$?" != "0" ]]; then
+  brew install stow
+fi
 
-for i in `ls -l | grep ^d | awk '{print $9}'`; do
-  stow $i
-done
+ls -l $BASE | grep ^d | awk '{print $9}' | xargs stow -t ~ -d `dirname $0`

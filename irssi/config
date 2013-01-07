@@ -111,7 +111,12 @@ channels = (
   { name = "#tmux"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ruby"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#rspec"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#pry"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#pry"; chatnet = "Freenode"; autojoin = "yes"; },
+  {
+    name = "#reddit-wicked_edge";
+    chatnet = "Freenode";
+    autojoin = "yes";
+  }
 );
 
 aliases = {
@@ -306,13 +311,49 @@ settings = {
 ignores = (
   {
     level = "ACTIONS JOINS PARTS QUITS NICKS MODES";
-    channels = ( "#mutt", "#vim", "#tmux", "#ruby", "#rspec", "#pry" );
+    channels = (
+      "#mutt",
+      "#vim",
+      "#tmux",
+      "#ruby",
+      "#rspec",
+      "#pry",
+      "#reddit-wicked_edge"
+    );
   },
   {
     level = "ACTIONS";
     pattern = "(away|gone|back|playin|weg|wech|returned)";
     regexp = "yes";
-    channels = ( "#mutt", "#vim", "#tmux", "#ruby", "#rspec", "#pry" );
+    channels = (
+      "#mutt",
+      "#vim",
+      "#tmux",
+      "#ruby",
+      "#rspec",
+      "#pry",
+      "#reddit-wicked_edge"
+    );
+  },
+  {
+    level = "ACTIONS";
+    pattern = "(away|gone|back|playin|weg|wech|returned)";
+    regexp = "yes";
+    channels = ( "#mutt", "#vim", "#tmux" );
+  },
+  {
+    level = "ACTIONS JOINS PARTS QUITS NICKS";
+    channels = ( "#mutt", "#vim", "#tmux" );
+  },
+  {
+    level = "ACTIONS";
+    pattern = "(away|gone|back|playin|weg|wech|returned)";
+    regexp = "yes";
+    channels = ( "#mutt", "#vim", "#tmux" );
+  },
+  {
+    level = "ACTIONS JOINS PARTS QUITS NICKS";
+    channels = ( "#mutt", "#vim", "#tmux" );
   },
   {
     level = "ACTIONS";
@@ -332,46 +373,6 @@ ignores = (
   },
   {
     level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#mutt", "#vim", "#tmux" );
-  },
-  {
-    level = "ACTIONS";
-    pattern = "(away|gone|back|playin|weg|wech|returned)";
-    regexp = "yes";
-    channels = ( "#mutt", "#vim", "#tmux" );
-  },
-  {
-    level = "ACTIONS JOINS PARTS QUITS NICKS";
-    channels = ( "#mutt", "#vim", "#tmux" );
-  },
-  {
-    level = "ACTIONS";
-    pattern = "(away|gone|back|playin|weg|wech|returned)";
-    regexp = "yes";
-    channels = ( "#mutt", "#vim", "#tmux" );
-  },
-  {
-    level = "ACTIONS JOINS PARTS QUITS NICKS";
-    channels = ( "#mutt", "#vim", "#tmux" );
-  },
-  {
-    level = "ACTIONS";
-    pattern = "(away|gone|back|playin|weg|wech|returned)";
-    regexp = "yes";
-    channels = ( "#mutt", "#vim", "#tmux" );
-  },
-  {
-    level = "ACTIONS JOINS PARTS QUITS NICKS";
-    channels = ( "#mutt", "#vim", "#tmux" );
-  },
-  {
-    level = "ACTIONS";
-    pattern = "(away|gone|back|playin|weg|wech|returned)";
-    regexp = "yes";
-    channels = ( "#mutt", "#vim", "#tmux" );
-  },
-  {
-    level = "ACTIONS JOINS PARTS QUITS NICKS";
     channels = ( "#mutt", "#vim", "#tmux" );
   },
   {

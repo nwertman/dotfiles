@@ -87,3 +87,8 @@ function! <SID>StripTrailingWhitespaces()
   let @/=_s
   call cursor(l, c)
 endfunction
+
+map <silent> <Leader>wB :call MyRsyncToBancroft()<CR>
+function! MyRsyncToBancroft()
+  silent execute "! rsync -avz " . fnamemodify('.',':p:h') . " nwertman@bancroft:/tmp/testing 2>&1 >/dev/null &" | redraw!
+endfunction

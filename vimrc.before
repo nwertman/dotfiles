@@ -1,3 +1,1 @@
-set runtimepath+=~/.janus
-
-au BufRead,BufNewFile *.txt setfiletype ignored
+call janus#disable_plugin('vim-vroom')

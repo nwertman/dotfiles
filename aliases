@@ -13,6 +13,7 @@ alias prod_pry="/usr/bin/pry"
 
 alias prod_irb="/usr/bin/irb"
 alias irb="INTLIB_USE_UAT=1 irb"
+alias rso="rake spec && open coverage/index.html"
 
 # SVN helpers
 alias si="svn info"
@@ -36,6 +37,9 @@ alias p4='awk "{print \$4}"'
 alias p5='awk "{print \$5}"'
 alias p6='awk "{print \$6}"'
 alias p9='awk "{print \$9}"'
+
+alias viwork='iwork && vim'
+alias prywork='iwork && pry'
 
 iwork() {
   cd `~/bin/workit`

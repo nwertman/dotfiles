@@ -1,0 +1,5 @@
+--all-types
+--ignore-dir=coverage/
+--ignore-dir=doc/
+--ignore-dir=tmp/
+--smart-case

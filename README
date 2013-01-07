@@ -1,0 +1,7 @@
+Simple dotfile setup which is managed by 'stow'
+
+Just run 'install' from within the dotfile checkout
+
+If new bundles are added to vimrc, then the .gitignore file needs to be updated at:
+
+vim/.vim/bundles/.gitignore

@@ -1,0 +1,23 @@
+# ~/.tmuxinator/trunk.yml
+# you can make as many tabs as you wish...
+
+project_name: bancroft
+project_root: /Volumes/Data/Users/nwertman
+pre:
+  - sudo ls /tmp
+  - security unlock-keychain
+tabs:
+  - Vim: vim
+  - Pry: pry
+  - zsh: 
+  - zsh: 
+  - zsh: 
+  - zsh: 
+  - zsh: 
+  - zsh: 
+  - zsh: 
+  - Logs:
+      layout: even-vertical
+      panes:
+        - top -u -s 3
+        - sudo tail -f /var/log/system.log

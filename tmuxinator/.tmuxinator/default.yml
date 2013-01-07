@@ -1,0 +1,26 @@
+# ~/.tmuxinator/trunk.yml
+# you can make as many tabs as you wish...
+
+project_name: default
+project_root: /Volumes/Data/Users/local
+pre: sudo ls /tmp
+tabs:
+  - Logs:
+      layout: even-vertical
+      panes:
+        - top -u -s 3
+        - sudo tail -f /var/log/system.log
+        - tail -f /private/var/tmp/offlineimap.log
+  - Mutt: cd ~/Desktop && mutt
+  - Irssi: cd ~/Desktop && irssi
+  - Vim: iwork && vim
+  - Pry: iwork && pry
+  - Zsh: iwork && zsh
+  - Zsh: iwork && zsh
+  - Zsh: iwork && zsh
+  - Zsh: iwork && zsh
+  - Zsh: iwork && zsh
+  - bancroft: cd ~/Desktop && ~/bin/sshit bancroft
+  - bigrip: cd ~/Desktop && ~/bin/sshit bigrip
+  - jubilee: cd ~/Desktop && ~/bin/sshit jubilee
+  - alton: cd ~/Desktop && ~/bin/sshit alton

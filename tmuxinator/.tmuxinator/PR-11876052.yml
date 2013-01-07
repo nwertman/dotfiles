@@ -1,0 +1,21 @@
+# ~/.tmuxinator/change-object.yml
+# you can make as many tabs as you wish...
+
+project_name: PR-11876052
+project_root: ~/Source/Professional/IntegrationTools/PR-11876052
+pre: sudo ls /tmp && svn update
+tabs:
+  - Vim: vim
+  - Pry: pry
+  - bash:
+  - bash:
+  - bash:
+  - bash:
+  - bash:
+  - bash:
+  - bash:
+  - Logs:
+      layout: even-vertical
+      panes:
+        - top -u -s 3
+        - sudo tail -f /var/log/system.log
